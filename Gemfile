@@ -24,5 +24,5 @@ gem 'jquery-rails', '2.0.1'
 
 group :production do 
 	gem 'pg', '0.12.2'
-	gem 'rails_12factor'
+	#gem 'rails_12factor'
 end
