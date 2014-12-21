@@ -1,3 +1,5 @@
+#for future reference
+
 class User
 	attr_accessor :email, :firstName, :lastName, :labelName, :labelScene, :bandOne, :bandTwo, :bandThree
 
