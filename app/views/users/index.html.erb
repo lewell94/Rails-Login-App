@@ -1,0 +1,25 @@
+<h1>User List</h1>
+<br><br><br><br>
+
+<div class="container">
+	<table class="table">
+		<tr>
+			<th>Founder</th>
+			<th>Record Label</th>
+			<th>Scene</th>
+			<th>Band One</th>
+			<th>Band Two</th>
+			<th>Band Three</th>
+		</tr>
+		<tr>
+			<% @users.each do |user| %>
+			<td><%= user.firstName %> <%= user.lastName %></td>
+			<td><%= user.labelName %></td>
+			<td><%= user.labelScene %></td>
+			<td><%= user.bandOne %></td>
+			<td><%= user.bandTwo %></td>
+			<td><%= user.bandThree %></td>
+			<% end %>
+		</tr>
+	</table>
+</div>

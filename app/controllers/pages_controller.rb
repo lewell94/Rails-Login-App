@@ -3,6 +3,4 @@ class PagesController < ApplicationController
   end
   def label
   end
-  def users
-  end
 end

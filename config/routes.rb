@@ -1,10 +1,9 @@
 LoginApp::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   root to: 'pages#home'
   match '/signup', to: 'users#new'
   match '/label', to: 'pages#label'
-  match '/users', to: 'pages#users'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
