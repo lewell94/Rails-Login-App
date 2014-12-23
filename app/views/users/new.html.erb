@@ -1,42 +1,49 @@
+<% provide(:title, 'Sign Up') %>
 <div class="container">
 	<div class="well">
-		<form class="form-horizontal" name="signupForm">
+		<%= form_for @user, :html => {:class => "form-horizontal"} do |f|  %>
+			<%= render 'shared/error_messages' %>
 			<fieldset>
 				<legend>New User Information
 					<div class="form-group">
-						<label for="email" class="col-md-2 control-label">Email</label>
+						<%= f.label :email, class: "col-md-2 control-label" %>
 						<div class="col-md-10">
-							<input type="email" name="email" placeholder="Email" class="form-control" required />
+							<%= f.email_field :email, placeholder: "Email", class: "form-control" %> 
 						</div>
 					</div>
+
 					<div class="form-group">
-						<label for="password" class="col-md-2 control-label">Password</label>
+						<%= f.label :password, class: "col-md-2 control-label" %>
 						<div class="col-md-10">
-							<input type="password" name="password" placeholder="Password" class="form-control" required />
-						</div>
+							<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+						</div> 
 					</div>
+
 					<div class="form-group">
-						<label for="fname" class="col-md-2 control-label">First Name</label>
+						<%= f.label :firstName, "First Name", class: "col-md-2 control-label" %>
 						<div class="col-md-10">
-							<input type="text" name="fname" placeholder="First Name" class="form-control" required />
+							<%= f.text_field :firstName, placeholder: "First Name", class: "form-control" %>
 						</div>
 					</div>
+
 					<div class="form-group">
-						<label for="lname" class="col-md-2 control-label">Last Name</label>
+						<%= f.label :lastName, "Last Name", class: "col-md-2 control-label" %>
 						<div class="col-md-10">
-							<input type="text" name="lname" placeholder="Last Name" class="form-control" required />
+							<%= f.text_field :lastName, placeholder: "Last Name", class: "form-control" %>
 						</div>
 					</div>
+
 					<div class="form-group">
 						<div class="col-md-10 col-md-offset-2">
 							<div class="pull-right">
-								<button class="btn btn-primary">Submit</button>
-								<button class="btn btn-default"><%= link_to "Cancel", root_path %></button>
+								<%= f.submit "Submit", class: "btn btn-primary" %> 
+								<button class="btn btn-default"><%= link_to "Cancel", root_path %></button> 
 							</div>
 						</div>
 					</div>
 				</legend>
 			</fieldset>
-		</form>
+		<% end %>
 	</div>
 </div>
+

@@ -11,15 +11,15 @@
 			<th>Band Two</th>
 			<th>Band Three</th>
 		</tr>
-		<tr>
-			<% @users.each do |user| %>
-			<td><%= user.firstName %> <%= user.lastName %></td>
-			<td><%= user.labelName %></td>
-			<td><%= user.labelScene %></td>
-			<td><%= user.bandOne %></td>
-			<td><%= user.bandTwo %></td>
-			<td><%= user.bandThree %></td>
-			<% end %>
-		</tr>
+		<% @users.each do |user| %>
+			<tr>
+				<td><%= user.firstName %> <%= user.lastName %></td>
+				<td><%= user.labelName %></td>
+				<td><%= user.labelScene %></td>
+				<td><%= user.bandOne %></td>
+				<td><%= user.bandTwo %></td>
+				<td><%= user.bandThree %></td>
+			</tr>
+		<% end %>
 	</table>
 </div>

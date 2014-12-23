@@ -16,6 +16,7 @@
 #
 
 class User < ActiveRecord::Base
+  include ActiveModel::ForbiddenAttributesProtection
   attr_accessible :bandOne, :bandThree, :bandTwo, :email, :firstName, :labelName, :labelScene, :lastName, :password
   has_secure_password
 
