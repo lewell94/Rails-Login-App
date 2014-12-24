@@ -1,9 +1,11 @@
 LoginApp::Application.routes.draw do
   resources :users
+  resources :sessions, only: [:new, :create, :destory]
 
   root to: 'pages#home'
   match '/signup', to: 'users#new'
   match '/label', to: 'pages#label'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
