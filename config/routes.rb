@@ -4,7 +4,7 @@ LoginApp::Application.routes.draw do
 
   root to: 'pages#home'
   match '/signup', to: 'users#new'
-  match '/label', to: 'pages#label'
+  #match '/label', to: 'users#edit'
   match '/signout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation:

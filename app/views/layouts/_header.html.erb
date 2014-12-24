@@ -19,7 +19,7 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li>
-									<%= link_to "Your Label", label_path %>
+									<%= link_to "Your Label", edit_user_path(current_user) %>
 								</li>
 								<li>
 									<%= link_to "Sign Out", signout_path, method: "delete" %>
