@@ -2,7 +2,7 @@ A simple login app built with Rails
 
 https://quiet-brook-9003.herokuapp.com
 
-To run this locally, simply download and unzip the zip folder. Then open up your command line, navigate to the folder, set up the database with the command bundle exec rake db:migrate (you need to have Bundler installed for this to work, see the note below for more information on how to do that) and start the server using the command rails s.
+To run this locally, simply download and unzip the zip folder. Then open up your command line, navigate to the folder you unzipped in, set up the database with the command bundle exec rake db:migrate (you need to have Bundler installed for this to work, see the note below for more information on how to do that) and start the server using the command rails s.
 
 ```
 $ cd documents/Rails-Login-App-master
