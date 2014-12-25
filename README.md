@@ -8,4 +8,7 @@ To run this locally, simply download and unzip the zip folder. Then open up your
 $ cd documents/Rails-Login-App-master
 $ rails s
 ```
+
+Please note you will need Ruby 1.9.3, Rails 3.2.3 and various ruby gems installed on your computer to do this. To install Ruby 1.9.3, simply <A href="https://rvm.io/rvm/install">install RVM</a> and run ```$ rvm install 1.9.2```. To install Rails 3.2.3, first <a href="https://rubygems.org/pages/download">install RubyGems</a>, and run ```$ gem install rails -v 3.2.3```. Finally, to install the various other gems needed, first install Bundler ```$ gem install bundler```, navigate to the folder ```$ cd documents/Rails-Login-App-master``` and run ```$ bundle install```
+
 Once you have done that, just navigate to localhost:3000 in your browser. 
