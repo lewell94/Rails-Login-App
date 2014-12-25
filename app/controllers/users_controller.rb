@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "User account created!"
-    	redirect_to root_url
+    	redirect_to edit_user_path(current_user)
     else
       render "new"
     end
@@ -27,9 +27,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    #@user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "something"
+      flash[:success] = "Record Label created!"
       sign_in @user
       redirect_to root_url
     else

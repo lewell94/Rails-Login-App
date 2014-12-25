@@ -2,14 +2,19 @@
 
 <div class="jumbotron">
 	<h1>Rails Login App</h1>
-	<h2>Click <%= link_to "here", signup_path %> to sign up and create your record label!</h2>
-<!--only show when logged in	
-<div class="row">
-	<div class="col-md-12">
-		<p>Your record label blah...</p>
-	</div>
-	<div class="col-md-12">
-		<p>Click <%= link_to "here", users_path %> to check out the other record labels</p>
-	</div>
-</div>-->
+	<% if signed_in? %>
+	<% else %>
+		<h2>Click <%= link_to "here", signup_path %> to sign up and create your record label!</h2>
+	<% end %>
 </div>
+<% if signed_in? %>	
+	<div class="row">
+		<div class="col-md-12">
+			<p>Hi <%= current_user.firstName %>! Your record label <%= current_user.labelName %> in the <%= current_user.labelScene %> with the bands <%= current_user.bandOne %>, <%= current_user.bandTwo %> and <%= current_user.bandThree %> is doing great!</p>
+		</div>
+		<div class="col-md-12">
+			<p>Click <%= link_to "here", users_path %> to check out the other record labels</p>
+		</div>
+	</div>
+<% else %>
+<% end %>
