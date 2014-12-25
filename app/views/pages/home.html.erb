@@ -10,7 +10,7 @@
 <% if signed_in? %>	
 	<div class="row">
 		<div class="col-md-12">
-			<p>Hi <%= current_user.firstName %>! Your record label <%= current_user.labelName %> in the <%= current_user.labelScene %> with the bands <%= current_user.bandOne %>, <%= current_user.bandTwo %> and <%= current_user.bandThree %> is doing great!</p>
+			<p>Hi <%= current_user.firstName %>! Your record label <%= current_user.labelName %> in the <%= current_user.labelScene %> scene with the bands <%= current_user.bandOne %>, <%= current_user.bandTwo %> and <%= current_user.bandThree %> is doing great!</p>
 		</div>
 		<div class="col-md-12">
 			<p>Click <%= link_to "here", users_path %> to check out the other record labels</p>
